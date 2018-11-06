@@ -27,18 +27,18 @@ The point cloud files decoded from the .bag file are usually in .pcd format. In 
 
 * **Preparation:** Put the .pcd files into [pcd](/pcd2bin/pcd). Set the file path in the code [pcd2bin.cpp](/pcd2bin/pcd2bin.cpp).
 
-* **Convertion:**The .bin files are saved into [bin](/pcd2bin/bin)
+* **Convertion:** The .bin files are saved into [bin](/pcd2bin/bin)
 
 	`cd CMakeFile`; `./pcd2bin`
 
 ### 3. Create files_list.txt ###
 The KITTI dataset has txt files like train.txt trainval.txt val.txt, which contains a subset of all data files.  So we need to get the files_list.txt
 
-* **Get files_list:**the result will be saved into [bin](/pcd2bin/bin) named *list.txt*.
+* **Get files_list:** The result will be saved into [bin](/pcd2bin/bin) named *list.txt*.
 
 	`cd bin`; `ls -1 | grep ".bin$" > list.txt`
 
-* **Create the final .txt:**The txt file obtained in the previous step contains a file suffix such as .bin. This requires further processing. After this step, you will get the final txt file named *files_list.txt*.
+* **Create the final .txt:** The txt file obtained in the previous step contains a file suffix such as .bin. This requires further processing. After this step, you will get the final txt file named *files_list.txt*.
 
 	`python get_list.py`
 
