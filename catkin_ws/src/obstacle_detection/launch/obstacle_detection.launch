@@ -1,0 +1,12 @@
+<launch>
+    <node pkg = "obstacle_detection" type = "cloud_preprocess" name = "cloud_preprocess"/>
+    <!--node pkg = "obstacle_detection" type = "feature_search" name = "feature_search"-->
+    <node pkg = "obstacle_detection" type = "sync_cloud" name = "sync_cloud"/>
+    <node pkg = "obstacle_detection" type = "map_generate" name = "map_generate" output="screen"/>
+    <node pkg = "obstacle_detection" type = "object_combination" name = "object_combination" />
+    <node pkg = "obstacle_detection" type = "curb_detect" name = "curb_detect" />
+    <!--node pkg = "obstacle_detection" type = "height_map" name = "height_map" output="screen"-->
+    <node pkg = "obstacle_detection" type = "feature_combination" name = "feature_combination"/>
+    <!--node pkg = "obstacle_detection" type = "radial_search" name = "radial_search" -->
+    <node pkg = "obstacle_detection" type = "cloud_cluster" name = "cloud_cluster"/>
+</launch>

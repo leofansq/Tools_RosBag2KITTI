@@ -1,0 +1,4 @@
+<launch>
+    <node pkg = "obstacle_detection" type = "cloud_preprocess" name = "cloud_preprocess"/>
+    <node pkg = "obstacle_detection" type = "tank" name = "tank" output = "screen"/>
+</launch>
