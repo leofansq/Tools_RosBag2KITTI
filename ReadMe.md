@@ -11,6 +11,9 @@ Data files recorded via ROS are usually saved in .bag format. We need to use the
 	
 	`cd catkin_ws`; `catkin_make`
 
+* **Coordinate system transformation(Optional):**The purpose of coordinate system rotation and translation is achieved by adjusting the following parameter values in the file [map_generation_node.cpp](/catkin_ws/src/obstacle_detection/src/map_generation_node.cpp). All rotation parameters are angled and clockwise is positive.
+
+
 * **Decoding:** Run `roscore` on the first console. Then open a new console, run `./devel/lib/obstacle_detection/map_generate`in the *catkin_ws* directory. Open a new console, run `rosbag play xxx.bag -r 0.1`. The result files are save into the [output](/catkin_ws/output).
 > 0.1 in the code means 0.1 times speed. The Speed is determined according to computer io performance. Make sure the timestamps are within +-50ms, otherwise adjust the play speed. 
 
